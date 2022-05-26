@@ -1,0 +1,139 @@
+html, body { 
+    --color-1: #a8e6cf;
+    --color-2: #dcedc1; 
+    --color-3: #f15bb5; 
+    --color-4: #ffaaa5; 
+    --color-5: #9b5de5;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 50px;
+    background-image: linear-gradient(135deg, var(--color-1) , var(--color-2));
+    font-family: 'Zen dots', sans-serif;
+    height: 100vh;
+    color: black;
+}
+
+.container {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.players {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.player-name {
+    padding-bottom: 1rem;
+}
+
+#player1, #player2{
+    position: relative;
+}
+
+.dice {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin: 0 auto;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.burn-emoji {
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    transform: translateY(50px);
+    font-size: 40px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.burn-emoji.animate {
+    animation: burn 1s;
+}
+button {
+    color: #fff;
+    padding: 10px 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:focus {
+    outline: none;
+}
+
+small {
+    display: block;
+    font-size: 0.7em;
+}
+#rollBtns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#rollBtn, #extBtn, #warBtn {
+    background-color: var(--color-5);
+}
+#resetBtn {
+    display: none;
+    background-color: var(--color-4);
+    margin: 0 auto;
+}
+.active {
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,255,5,0.5);
+}
+.anim-rotate {
+    animation: rotate 0.8s; 
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    25% {
+        
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes burn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px)
+    }
+    50%{
+        transform: none;
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+.copyright {
+    font-size: 12px;
+    text-align: center;
+    font-family: "sans-serif";
+    padding: 2rem 0;
+    display: grid;
+}

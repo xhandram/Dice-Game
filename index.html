@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="message">Player 1 Turn</h1>
+      <hr />
+      <div class="players">
+        <div id="player1">
+          <div class="player-name">Player 1</div>
+          <div id="player1Dice" class="dice active">🦄</div>
+          <h3>
+            Score:
+            <span id="player1Scoreboard">0</span>
+          </h3>
+          <div class="burn-emoji">🔥</div>
+        </div>
+        <div id="player2">
+          <div class="player-name">Player 2</div>
+          <div id="player2Dice" class="dice">🐉</div>
+          <h3>
+            Score:
+            <span id="player2Scoreboard">0</span>
+          </h3>
+          <div class="burn-emoji">🔥</div>
+        </div>
+      </div>
+      <hr />
+      <div id="rollBtns">
+        <div>
+          <button id="rollBtn">Normal Dice 🎲</button><small>1 to 6</small>
+        </div>
+        <div>
+          <button id="extBtn">Extreme Dice ⚡️</button><small>1 or 6</small>
+        </div>
+        <div>
+          <button id="warBtn">War Dice 🔥</button><small>-3 for someone</small>
+        </div>
+      </div>
+      <button id="resetBtn">Reset Game 🔁</button>
+    </div>
+    <a
+      class="copyright"
+      href="https://www.flaticon.com/free-icons/die"
+      title="die icons"
+      >Die icons created by Creative Stall Premium - Flaticon</a
+    >
+    <script src="index.js"></script>
+  </body>
+</html>
